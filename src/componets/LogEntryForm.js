@@ -14,7 +14,7 @@ const LogEntryForm = ({ location, onClose }) => {
       setLoading(true);
       data.latitude = location.latitude;
       data.longitude = location.longitude;
-      await Axios.post("http://localhost:2000/api/logs", data, {
+      await Axios.post("https://travel-logo-app.herokuapp.com/api/logs", data, {
         headers: {
           "content-type": "application/json",
         },

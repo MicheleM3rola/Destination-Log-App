@@ -18,7 +18,9 @@ function App() {
   });
 
   const listLogEntries = async () => {
-    const res = await Axios.get("http://localhost:2000/api/logs");
+    const res = await Axios.get(
+      "https://travel-logo-app.herokuapp.com/api/logs"
+    );
     const requestedEntry = res.data;
     return setLogEntries(requestedEntry);
   };
