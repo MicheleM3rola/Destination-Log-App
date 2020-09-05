@@ -14,15 +14,11 @@ const LogEntryForm = ({ location, onClose }) => {
       setLoading(true);
       data.latitude = location.latitude;
       data.longitude = location.longitude;
-      const entryLog = await Axios.post(
-        "http://localhost:2000/api/logs",
-        data,
-        {
-          headers: {
-            "content-type": "application/json",
-          },
-        }
-      );
+      await Axios.post("http://localhost:2000/api/logs", data, {
+        headers: {
+          "content-type": "application/json",
+        },
+      });
       onClose();
     } catch (error) {
       console.error(error);

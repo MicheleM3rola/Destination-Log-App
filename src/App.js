@@ -89,7 +89,7 @@ function App() {
                 anchor="top"
               >
                 <div className="popup">
-                  <img src={entry.image} alt="image-log-entry" />
+                  <img src={entry.image} alt="log-entry" />
                   <h3>{entry.title}</h3>
                   <p>{entry.comments}</p>
                   <small>
